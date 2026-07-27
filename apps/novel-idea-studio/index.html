@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Novel Idea Studio · DGE</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1018;--panel:#171b28;--line:#30364c;--text:#eef0f7;--muted:#9ba2b9;--accent:#7c82ff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.6 system-ui,"Noto Sans KR",sans-serif}.wrap{max-width:1180px;margin:auto;padding:28px}.head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:20px}.head h1{margin:0;font-size:28px}.head p{margin:3px 0 0;color:var(--muted)}.badge{border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:#bbc0ff}.grid{display:grid;grid-template-columns:420px 1fr;gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}label{display:block;font-weight:700;margin:13px 0 6px}input,textarea,select{width:100%;border:1px solid var(--line);border-radius:10px;background:#0e121c;color:var(--text);padding:10px 12px;font:inherit}textarea{min-height:100px;resize:vertical}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px}.checks label{font-weight:500;margin:0;border:1px solid var(--line);border-radius:9px;padding:8px}.checks input{width:auto;margin-right:7px}button{border:0;border-radius:10px;background:var(--accent);color:white;padding:11px 16px;font-weight:800;cursor:pointer;margin-top:15px}button.alt{background:#292f43;margin-left:7px}pre{margin:0;white-space:pre-wrap;word-break:break-word;min-height:650px;color:#dfe2f2}.note{font-size:12px;color:var(--muted);margin-top:10px}@media(max-width:850px){.grid{grid-template-columns:1fr}.head{align-items:start;flex-direction:column}pre{min-height:420px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head"><div><h1>소설 아이디어 스튜디오</h1><p>다양성 생성 엔진 · Creative Writing Vertical</p></div><span class="badge">v0.2 Prompt Composer</span></div>
+  <div class="grid">
+    <section class="card">
+      <label for="genre">장르</label>
+      <input id="genre" value="현대 판타지" placeholder="예: 로맨스 판타지, 무협, SF">
+      <label for="premise">핵심 발제</label>
+      <textarea id="premise" placeholder="주인공, 사건, 세계의 이상한 규칙을 2~5문장으로 작성"></textarea>
+      <label for="audience">목표 독자·플랫폼</label>
+      <input id="audience" placeholder="예: 한국 웹소설 모바일 독자, 15세 이용가">
+      <label for="constraints">필수 조건</label>
+      <textarea id="constraints" placeholder="반드시 유지할 설정, 분량, 톤, 제작 제약"></textarea>
+      <label for="avoid">피할 클리셰·금지 요소</label>
+      <textarea id="avoid" placeholder="예: 무조건적인 회귀 치트, 실존 작가 문체 모방"></textarea>
+      <label for="mode">다양성 모드</label>
+      <select id="mode"><option value="balanced">균형: 대중성+참신함</option><option value="stratified" selected>층화: 서로 다른 서사 구조</option><option value="tail">꼬리 탐색: 덜 전형적인 후보</option></select>
+      <label>생성 모듈</label>
+      <div class="checks">
+        <label><input type="checkbox" value="제목" checked>제목</label>
+        <label><input type="checkbox" value="세계관" checked>세계관</label>
+        <label><input type="checkbox" value="캐릭터" checked>캐릭터</label>
+        <label><input type="checkbox" value="플롯" checked>플롯</label>
+        <label><input type="checkbox" value="엔딩" checked>엔딩</label>
+        <label><input type="checkbox" value="이미지 콘셉트">이미지 콘셉트</label>
+      </div>
+      <button onclick="buildPrompt()">DGE 프롬프트 생성</button><button class="alt" onclick="copyPrompt()">복사</button>
+      <div class="note">이 프로토타입은 API 키를 저장하지 않습니다. 생성된 프롬프트를 원하는 LLM에 붙여 넣으십시오.</div>
+    </section>
+    <section class="card"><pre id="out">왼쪽에 발제를 입력하고 “DGE 프롬프트 생성”을 누르십시오.</pre></section>
+  </div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+function lines(text){return text.split(/\n+/).map(v=>v.trim()).filter(Boolean).map(v=>`- ${v}`).join('\n')||'- 없음';}
+function buildPrompt(){
+ const modules=[...document.querySelectorAll('.checks input:checked')].map(x=>x.value);
+ const mode=$('mode').value;
+ const rule={balanced:'Head·Mid·Tail을 섞되 품질과 제약을 우선한다.',stratified:'먼저 4~8개의 의미적 서사 층을 만들고 각기 다른 층에서 생성한다.',tail:'전형성 0.10 이하의 타당한 후보를 우선하되 무의미해지면 임계값 완화를 요청한다.'}[mode];
+ const p=`당신은 다양성 생성 엔진의 소설·서사 확장팩이다. 하나의 정답을 쓰지 말고 서로 다른 서사 메커니즘의 후보 포트폴리오를 생성하라.\n\n[브리프]\n- 장르: ${$('genre').value.trim()||'미지정'}\n- 핵심 발제: ${$('premise').value.trim()||'미입력'}\n- 목표 독자·플랫폼: ${$('audience').value.trim()||'미지정'}\n- 생성 모듈: ${modules.join(', ')||'미지정'}\n\n[필수 조건]\n${lines($('constraints').value)}\n\n[피할 클리셰·금지 요소]\n${lines($('avoid').value)}\n\n[모드]\n- ${mode}: ${rule}\n\n[절차]\n1. 이 발제에서 가장 전형적인 기본 전개를 3문장 이내로 요약한다.\n2. 제목 구조, 세계 규칙, 캐릭터 욕망, 정보 흐름, 승리조건, 대가, 엔딩 결론 중 필요한 축으로 해결 공간을 층화한다.\n3. 각 모듈마다 표현이 아니라 작동 원리가 다른 후보를 생성한다.\n4. 모든 후보에 typicality_estimate(0~1), typicality_band(head/mid/tail), stratum, concise_rationale, key_mechanisms, constraints_passed, risks를 붙인다.\n5. 전형성 값의 합계를 1 또는 100%로 맞추지 않는다. 전형성은 품질·흥행률·사실 확률이 아니다.\n6. 실존 작가의 문체를 직접 모방하지 않는다. 비공개 사고과정을 출력하지 말고 짧고 검수 가능한 근거만 쓴다.\n\n[모듈별 필수 출력]\n- 제목: title, structure, core_hook, cliche_risk\n- 세계관: core_rule, daily_consequence, conflict, implementation_risk\n- 캐릭터: nickname, role_archetype, visible_signal, outer_inner_paradox, desire, weakness, obstacle, rumor, action_signal\n- 플롯: act1_hook, midpoint_shift, final_choice, payoff, failure_risk\n- 엔딩: trigger_conditions, cost, thematic_conclusion, replay_hook\n\n반드시 하나의 JSON 객체로 응답하라.`;
+ $('out').textContent=p;
+}
+async function copyPrompt(){await navigator.clipboard.writeText($('out').textContent);event.target.textContent='복사됨';setTimeout(()=>event.target.textContent='복사',900)}
+</script>
+</body>
+</html>
