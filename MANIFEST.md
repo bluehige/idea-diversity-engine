@@ -1,77 +1,61 @@
-# Repository Manifest
+# Repository Manifest — v0.2
 
-- `.editorconfig`
-- `.gitattributes`
-- `.github/ISSUE_TEMPLATE/bug_report.yml`
-- `.github/ISSUE_TEMPLATE/vertical_pack.yml`
-- `.github/pull_request_template.md`
-- `.github/workflows/test.yml`
-- `.gitignore`
-- `AGENTS.md`
-- `CHANGELOG.md`
-- `CITATION.cff`
-- `CONTRIBUTING.md`
-- `DISCLAIMER.md`
-- `LICENSE`
-- `NOTICE`
+## Primary navigation
+
 - `README.md`
 - `README_EN.md`
 - `README_KR.md`
+- `CATALOG.md`
+- `AGENTS.md`
+- `CHANGELOG.md`
+- `CONTRIBUTING.md`
 - `SECURITY.md`
-- `docs/00_MASTER_SPEC_KR.md`
-- `docs/01_RESEARCH_REVIEW_KR.md`
-- `docs/02_PRODUCT_REQUIREMENTS_KR.md`
-- `docs/03_APPLICATION_LANDSCAPE_KR.md`
-- `docs/04_PLATFORM_DISTRIBUTION_MATRIX_KR.md`
-- `docs/05_BUSINESS_MODEL_PORTFOLIO_KR.md`
-- `docs/06_GOVERNANCE_RISK_KR.md`
-- `docs/07_IMPLEMENTATION_ROADMAP_KR.md`
-- `docs/08_EXISTING_APP_MIGRATION_KR.md`
-- `docs/09_CODEX_IMPLEMENTATION_BRIEF_KR.md`
-- `docs/10_VERTICAL_PRODUCT_CONCEPTS_KR.md`
-- `docs/11_MARKET_VALIDATION_PLAN_KR.md`
-- `docs/12_PUBLIC_RELEASE_CHECKLIST.md`
-- `docs/13_REFERENCE_ARCHITECTURE.md`
-- `docs/14_EXECUTIVE_REPORT_KR.md`
-- `docs/15_RELEASE_NOTES_v0.1.0.md`
-- `docs/REFERENCES.md`
-- `examples/README.md`
-- `examples/briefs/3d_concept.json`
-- `examples/briefs/ai_pet_behavior.json`
-- `examples/briefs/business_model.json`
-- `examples/briefs/game_liveops.json`
-- `examples/briefs/ip_design_around.json`
-- `examples/briefs/marketing_campaign.json`
-- `examples/briefs/research_hypothesis.json`
-- `examples/briefs/safety_training.json`
-- `examples/briefs/software_testing.json`
-- `examples/outputs/sample_portfolio.json`
-- `prompts/quality_gate.md`
-- `prompts/vertical_3d_concept.md`
-- `prompts/vertical_ai_pet_behavior.md`
-- `prompts/vertical_business_model.md`
-- `prompts/vertical_game_liveops.md`
-- `prompts/vertical_ip_design_around.md`
-- `prompts/vertical_marketing_campaign.md`
-- `prompts/vertical_research_hypothesis.md`
-- `prompts/vertical_safety_scenario.md`
-- `prompts/vertical_software_edge_cases.md`
-- `prompts/vs_balanced.md`
-- `prompts/vs_standard.md`
-- `prompts/vs_stratified.md`
-- `prompts/vs_tail.md`
-- `pyproject.toml`
-- `schemas/brief.schema.json`
-- `schemas/idea-portfolio.schema.json`
-- `schemas/vs-candidate.schema.json`
-- `scripts/publish-to-github.ps1`
-- `scripts/publish-to-github.sh`
-- `skills/diversity-quality-gate/SKILL.md`
-- `skills/ip-idea-diversifier/SKILL.md`
-- `skills/vs-distribution-generator/SKILL.md`
-- `src/idea_diversity_engine/__init__.py`
-- `src/idea_diversity_engine/cli.py`
-- `src/idea_diversity_engine/prompting.py`
-- `src/idea_diversity_engine/validation.py`
-- `tests/test_prompting.py`
-- `tests/test_validation.py`
+- `DISCLAIMER.md`
+- `LICENSE`
+- `NOTICE`
+- `CITATION.cff`
+
+## v0.2 architecture
+
+- `core/README.md`
+- `verticals/README.md`
+- `verticals/catalog.json`
+- `verticals/_template/README.md`
+- `verticals/creative-writing/README.md`
+- `verticals/game-design/README.md`
+- `verticals/ip-invention/README.md`
+- `verticals/safety-training/README.md`
+- `verticals/business-strategy/README.md`
+- `verticals/marketing-content/README.md`
+- `verticals/visual-3d-design/README.md`
+- `verticals/ai-character/README.md`
+- `verticals/research-synthetic-data/README.md`
+- `verticals/software-qa/README.md`
+- `apps/README.md`
+- `apps/novel-idea-studio/README.md`
+- `apps/novel-idea-studio/index.html`
+- `apps/narrative-lens-panel/README.md`
+- `apps/narrative-lens-panel/index.html`
+- `apps/character-starter/README.md`
+- `apps/character-starter/index.html`
+- `apps/diversity-playground/README.md`
+- `apps/patent-idea-workbench/README.md`
+- `apps/safety-scenario-studio/README.md`
+- `apps/game-content-forge/README.md`
+- `integrations/README.md`
+- `benchmarks/README.md`
+
+## v0.1 compatibility assets
+
+The following existing directories remain supported while their contents are progressively migrated into the v0.2 architecture.
+
+- `docs/`
+- `examples/`
+- `prompts/`
+- `schemas/`
+- `skills/`
+- `src/idea_diversity_engine/`
+- `tests/`
+- `scripts/`
+
+See `CATALOG.md` for extension status and `CHANGELOG.md` for release changes.
