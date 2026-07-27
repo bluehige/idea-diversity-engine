@@ -1,0 +1,28 @@
+{
+  "domain": "indie strategy game live operations",
+  "problem": "Updates add cosmetic content but do not create new player decisions or replayability.",
+  "target_users": [
+    "indie game designers",
+    "live-ops planners"
+  ],
+  "current_solution": "Theme-based event brainstorming",
+  "pain_points": [
+    "repetitive combat",
+    "same reward loop",
+    "weak multi-run motivation"
+  ],
+  "hard_constraints": [
+    "reuse existing core systems",
+    "small team production",
+    "no pay-to-win"
+  ],
+  "excluded_approaches": [
+    "content volume without new decisions"
+  ],
+  "available_assets": [
+    "monster growth system",
+    "building placement",
+    "multiple endings"
+  ],
+  "desired_effect": "Create update concepts with distinct strategic decisions and test plans."
+}

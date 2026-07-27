@@ -1,0 +1,18 @@
+Idea Diversity Engine
+Copyright 2026 bluehige
+
+This project is an independent application-design and skill toolkit inspired by:
+
+Jiayi Zhang, Simon Yu, Derek Chong, Anthony Sicilia, Michael R. Tomz,
+Christopher D. Manning, and Weiyan Shi.
+"Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity."
+arXiv:2510.01171.
+https://arxiv.org/abs/2510.01171
+
+Official implementation:
+https://github.com/CHATS-lab/verbalized-sampling
+
+The official implementation is licensed under Apache License 2.0. This repository
+contains independently written application documents, prompts, schemas, examples,
+and reference code. It does not redistribute the paper PDF and is not affiliated
+with CHATS-lab or the paper authors.

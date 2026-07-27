@@ -1,0 +1,25 @@
+name: Vertical pack proposal
+description: Propose a domain-specific prompt/schema/evaluation pack
+title: "[Vertical] "
+labels: [enhancement]
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Target workflow and user
+    validations:
+      required: true
+  - type: textarea
+    id: schema
+    attributes:
+      label: Required input/output fields
+  - type: textarea
+    id: risks
+    attributes:
+      label: Domain risks and required human review

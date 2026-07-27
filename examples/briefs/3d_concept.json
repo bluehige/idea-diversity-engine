@@ -1,0 +1,11 @@
+{
+  "domain": "3D real-time asset design",
+  "problem": "Tracked service robots for industrial training tend to share the same boxy silhouette and are difficult to read at a distance.",
+  "target_users": ["3D artists", "real-time simulation developers"],
+  "current_solution": "A rectangular tracked base with a conventional humanoid upper body",
+  "pain_points": ["weak silhouette differentiation", "too many small parts", "expensive rigging"],
+  "hard_constraints": ["real-time rendering", "single skeleton", "three LOD levels", "modular tool arms"],
+  "excluded_approaches": ["direct imitation of existing branded robots"],
+  "available_assets": ["Blender", "PBR material library", "Unity and Unreal export presets"],
+  "desired_effect": "Produce distinct, buildable concepts with clear modeling and optimization briefs."
+}

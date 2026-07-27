@@ -1,0 +1,28 @@
+{
+  "domain": "safety simulator IP discovery",
+  "problem": "Existing products use similar sensor-triggered training flows, making invention candidates repetitive.",
+  "target_users": [
+    "R&D engineers",
+    "patent managers"
+  ],
+  "current_solution": "Single brainstorming session and keyword search",
+  "pain_points": [
+    "limited mechanism coverage",
+    "weak technical-effect documentation"
+  ],
+  "hard_constraints": [
+    "no patentability claim",
+    "separate technical and business ideas"
+  ],
+  "excluded_approaches": [
+    "mere aggregation",
+    "UI-only change without technical effect"
+  ],
+  "available_assets": [
+    "motion sensors",
+    "HMDs",
+    "PC simulators",
+    "training records"
+  ],
+  "desired_effect": "Produce a diverse invention hypothesis portfolio and search plan."
+}

@@ -1,0 +1,11 @@
+{
+  "domain": "B2B safety-training marketing",
+  "problem": "Campaign concepts repeatedly rely on fear-based accident imagery and generic claims about immersion.",
+  "target_users": ["safety managers", "training-center operators", "public institutions"],
+  "current_solution": "Brochure and exhibition messaging centered on VR realism",
+  "pain_points": ["weak differentiation", "limited proof", "high production effort"],
+  "hard_constraints": ["no invented performance statistics", "respectful treatment of accidents", "Korean and Vietnamese localization"],
+  "excluded_approaches": ["graphic shock advertising"],
+  "available_assets": ["demo videos", "sensor-based evaluation logs", "modular simulator package"],
+  "desired_effect": "Create distinct campaigns tied to evidence, buyer stage, and measurable conversion."
+}

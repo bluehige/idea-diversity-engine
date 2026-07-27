@@ -1,0 +1,29 @@
+{
+  "domain": "AI creativity software",
+  "problem": "General-purpose idea generators produce repetitive suggestions and are difficult to monetize.",
+  "target_users": [
+    "R&D teams",
+    "content planners",
+    "independent creators"
+  ],
+  "current_solution": "Generic chatbot prompts and lists of ten ideas",
+  "pain_points": [
+    "semantic repetition",
+    "no audit trail",
+    "no domain handoff document"
+  ],
+  "hard_constraints": [
+    "provider-neutral",
+    "do not expose API keys",
+    "must support Korean"
+  ],
+  "excluded_approaches": [
+    "selling prompt text alone"
+  ],
+  "available_assets": [
+    "three skill files",
+    "research review",
+    "domain expertise in safety, 3D, and games"
+  ],
+  "desired_effect": "Create a defensible product portfolio and a low-cost validation path."
+}

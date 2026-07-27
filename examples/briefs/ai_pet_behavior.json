@@ -1,0 +1,11 @@
+{
+  "domain": "AI pet game behavior",
+  "problem": "The pet repeats friendly dialogue and reacts the same way to most player actions.",
+  "target_users": ["game designers", "players"],
+  "current_solution": "One LLM response generated from personality and recent chat",
+  "pain_points": ["repetitive affection", "weak memory use", "rare reactions feel random"],
+  "hard_constraints": ["preserve stored memory", "no manipulative guilt", "output must map to available animations"],
+  "excluded_approaches": ["unbounded autonomous actions"],
+  "available_assets": ["relationship state", "summarized memory", "emotion parameters", "animation tags"],
+  "desired_effect": "Generate varied, coherent actions that visibly express growth."
+}
