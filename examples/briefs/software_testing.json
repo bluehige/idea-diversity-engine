@@ -1,0 +1,27 @@
+{
+  "domain": "web application QA",
+  "problem": "Tests cover happy paths and a few obvious validation errors but miss state and permission interactions.",
+  "target_users": [
+    "QA engineers",
+    "developers"
+  ],
+  "current_solution": "Manual test case list",
+  "pain_points": [
+    "duplicate cases",
+    "low edge-case coverage",
+    "weak recovery tests"
+  ],
+  "hard_constraints": [
+    "no destructive production actions",
+    "tests must be reproducible"
+  ],
+  "excluded_approaches": [
+    "random fuzzing without expected outcomes"
+  ],
+  "available_assets": [
+    "API schema",
+    "role matrix",
+    "event logs"
+  ],
+  "desired_effect": "Generate auditable edge-case tests across distinct failure strata."
+}

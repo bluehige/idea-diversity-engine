@@ -1,0 +1,79 @@
+{
+  "brief_summary": "Create monetizable products from a provider-neutral idea-diversity toolkit.",
+  "mode": "stratified",
+  "tau": null,
+  "strata": [
+    "vertical SaaS",
+    "workflow integration",
+    "services",
+    "data/evaluation",
+    "developer infrastructure"
+  ],
+  "candidates": [
+    {
+      "id": "c1",
+      "text": "Safety Scenario Studio: convert work context and equipment constraints into diverse training scenarios with sensor and scoring specifications.",
+      "typicality_estimate": 0.18,
+      "typicality_band": "mid",
+      "stratum": "vertical SaaS",
+      "concise_rationale": "Uses existing safety and simulator domain expertise and produces a concrete deliverable beyond generic ideas.",
+      "key_mechanisms": [
+        "scenario stratification",
+        "sensor-logic export",
+        "expert review gate"
+      ],
+      "constraints_passed": [
+        "provider-neutral",
+        "Korean support"
+      ],
+      "risks": [
+        "requires domain validation",
+        "enterprise sales cycle"
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "MCP Diversity Gateway: expose portfolio generation, deduplication, and vertical exporters as reusable tools for multiple AI clients.",
+      "typicality_estimate": 0.09,
+      "typicality_band": "tail",
+      "stratum": "developer infrastructure",
+      "concise_rationale": "Turns the method into infrastructure rather than another standalone chatbot.",
+      "key_mechanisms": [
+        "MCP tools",
+        "provider adapters",
+        "shared semantic memory"
+      ],
+      "constraints_passed": [
+        "provider-neutral",
+        "no client-side keys"
+      ],
+      "risks": [
+        "developer-focused market",
+        "integration maintenance"
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Idea Homogeneity Audit: benchmark a team's prompts and outputs for semantic collapse, coverage gaps, and quality-diversity trade-offs.",
+      "typicality_estimate": 0.06,
+      "typicality_band": "tail",
+      "stratum": "data/evaluation",
+      "concise_rationale": "Sells measurement and governance, which is harder to replace with a copied prompt.",
+      "key_mechanisms": [
+        "batch embeddings",
+        "duplicate clusters",
+        "method comparison"
+      ],
+      "constraints_passed": [
+        "auditable output"
+      ],
+      "risks": [
+        "needs credible benchmarks",
+        "customer data privacy"
+      ]
+    }
+  ],
+  "warnings": [
+    "Typicality values are model-generated heuristics and do not sum to one."
+  ]
+}

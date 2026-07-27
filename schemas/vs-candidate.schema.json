@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/vs-candidate.schema.json",
+  "title": "VS Candidate",
+  "type": "object",
+  "required": [
+    "id",
+    "text",
+    "typicality_estimate",
+    "typicality_band",
+    "stratum",
+    "concise_rationale",
+    "key_mechanisms",
+    "constraints_passed",
+    "risks"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "typicality_estimate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "typicality_band": {
+      "enum": [
+        "head",
+        "mid",
+        "tail"
+      ]
+    },
+    "stratum": {
+      "type": "string",
+      "minLength": 1
+    },
+    "concise_rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "key_mechanisms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "constraints_passed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

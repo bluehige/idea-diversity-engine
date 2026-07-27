@@ -1,0 +1,29 @@
+{
+  "domain": "industrial safety training",
+  "problem": "Training content repeats a small number of representative accidents and misses combinations of environmental and human factors.",
+  "target_users": [
+    "safety training centers",
+    "manufacturing workers",
+    "VR simulator developers"
+  ],
+  "current_solution": "Manually authored linear scenarios",
+  "pain_points": [
+    "high customization cost",
+    "limited scenario coverage",
+    "sensor logic documented separately"
+  ],
+  "hard_constraints": [
+    "prevention and training purpose only",
+    "expert validation required",
+    "support PC and VR output"
+  ],
+  "excluded_approaches": [
+    "graphic shock content without learning value"
+  ],
+  "available_assets": [
+    "VR/PC simulators",
+    "sensor inputs",
+    "multilingual narration"
+  ],
+  "desired_effect": "Generate diverse, testable scenario specifications with scoring logic."
+}

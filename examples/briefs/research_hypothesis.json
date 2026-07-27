@@ -1,0 +1,11 @@
+{
+  "domain": "synthetic safety-training data research",
+  "problem": "Synthetic scenarios increase in quantity but remain semantically repetitive and may not improve evaluation coverage.",
+  "target_users": ["AI researchers", "safety-content developers"],
+  "current_solution": "Repeated prompting with random temperature settings",
+  "pain_points": ["unknown coverage", "duplicate scenarios", "weak external validity"],
+  "hard_constraints": ["falsifiable hypotheses", "privacy-preserving data", "human expert validation"],
+  "excluded_approaches": ["claims based only on an LLM judge"],
+  "available_assets": ["scenario taxonomy", "expert ratings", "simulator event logs"],
+  "desired_effect": "Design experiments that separate diversity, realism, and downstream training value."
+}
