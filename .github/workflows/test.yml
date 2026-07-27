@@ -12,4 +12,6 @@ jobs:
           python-version: "3.11"
       - run: python -m pip install -e ".[test]"
       - run: pytest -q
-      - run: idea-diversity validate --input examples/outputs/sample_portfolio.json
+      - run: dge list-verticals
+      - run: dge build-prompt --brief examples/briefs/safety_training.json --vertical safety-training --mode stratified --output /tmp/dge-prompt.txt
+      - run: dge validate --input examples/outputs/sample_portfolio.json

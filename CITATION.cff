@@ -1,14 +1,14 @@
 cff-version: 1.2.0
-title: Idea Diversity Engine
+title: Diversity Generation Engine
 message: "Please cite this software and the primary Verbalized Sampling paper when using the toolkit in research or published work."
 type: software
 authors:
   - family-names: bluehige
-version: 0.1.0
+version: 0.2.0
 date-released: 2026-07-27
 license: Apache-2.0
 repository-code: "https://github.com/bluehige/idea-diversity-engine"
-abstract: "A provider-neutral toolkit for building diverse LLM candidate portfolios with Verbalized Sampling, solution-space stratification, semantic memory, and quality gates."
+abstract: "A provider-neutral diversity generation engine for building, validating, and documenting portfolios of meaningfully different LLM candidates across domain verticals."
 references:
   - type: article
     title: "Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity"

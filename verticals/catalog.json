@@ -1,0 +1,95 @@
+{
+  "schema_version": "0.2",
+  "verticals": [
+    {
+      "id": "creative-writing",
+      "name_ko": "소설·서사 생성",
+      "name_en": "Creative Writing",
+      "status": "Prototype",
+      "inputs": ["genre", "premise", "target_audience", "constraints", "excluded_cliches"],
+      "outputs": ["titles", "worldbuilding", "characters", "plots", "endings"],
+      "human_review": ["narrative coherence", "copyright and imitation risk", "audience suitability"]
+    },
+    {
+      "id": "game-design",
+      "name_ko": "게임 기획·콘텐츠",
+      "name_en": "Game Design",
+      "status": "Prompt Pack",
+      "inputs": ["core_loop", "current_systems", "player_fatigue", "production_constraints"],
+      "outputs": ["mechanics", "monsters", "skills", "liveops", "playtest_plan"],
+      "human_review": ["balance", "production scope", "player experience"]
+    },
+    {
+      "id": "ip-invention",
+      "name_ko": "IP·특허 아이디어",
+      "name_en": "IP Invention",
+      "status": "Prompt Pack",
+      "inputs": ["technical_problem", "existing_structure", "required_effect", "prior_art_constraints"],
+      "outputs": ["invention_cards", "design_around", "search_queries", "claim_seeds", "evidence_plan"],
+      "human_review": ["prior-art search", "technical feasibility", "patent professional review"]
+    },
+    {
+      "id": "safety-training",
+      "name_ko": "안전교육·시뮬레이션",
+      "name_en": "Safety Training",
+      "status": "Prompt Pack",
+      "inputs": ["work_type", "learner", "environment", "equipment", "sensors", "required_behavior"],
+      "outputs": ["scenario", "branches", "sensor_logic", "judgement", "feedback", "localization"],
+      "human_review": ["safety accuracy", "hardware feasibility", "training effectiveness"]
+    },
+    {
+      "id": "business-strategy",
+      "name_ko": "사업·서비스 전략",
+      "name_en": "Business Strategy",
+      "status": "Prompt Pack",
+      "inputs": ["customer", "problem", "assets", "constraints", "evidence"],
+      "outputs": ["business_models", "revenue_options", "go_to_market", "validation_plan"],
+      "human_review": ["market evidence", "unit economics", "legal and operational risk"]
+    },
+    {
+      "id": "marketing-content",
+      "name_ko": "마케팅·콘텐츠",
+      "name_en": "Marketing Content",
+      "status": "Prompt Pack",
+      "inputs": ["audience", "offer", "evidence", "channel", "tone", "localization"],
+      "outputs": ["campaigns", "copy_angles", "content_formats", "customer_journey", "tests"],
+      "human_review": ["truthfulness", "brand consistency", "cultural localization"]
+    },
+    {
+      "id": "visual-3d-design",
+      "name_ko": "3D·비주얼 디자인",
+      "name_en": "Visual and 3D Design",
+      "status": "Prompt Pack",
+      "inputs": ["purpose", "engine", "platform", "budgets", "rigging", "style_constraints"],
+      "outputs": ["silhouettes", "part_structure", "materials", "rigging", "lod", "image_prompts"],
+      "human_review": ["buildability", "copyright risk", "performance budget"]
+    },
+    {
+      "id": "ai-character",
+      "name_ko": "AI 펫·NPC 행동",
+      "name_en": "AI Character",
+      "status": "Prompt Pack",
+      "inputs": ["persona", "memory", "emotion", "desire", "relationship", "available_animations"],
+      "outputs": ["behaviors", "dialogue", "memory_action", "relationship_change", "growth_signal"],
+      "human_review": ["character consistency", "manipulation risk", "animation feasibility"]
+    },
+    {
+      "id": "research-synthetic-data",
+      "name_ko": "연구·합성데이터",
+      "name_en": "Research and Synthetic Data",
+      "status": "Prompt Pack",
+      "inputs": ["research_question", "variables", "data", "measurement", "constraints"],
+      "outputs": ["hypotheses", "counter_hypotheses", "experiments", "failure_modes", "synthetic_cases"],
+      "human_review": ["falsifiability", "external validity", "privacy and bias"]
+    },
+    {
+      "id": "software-qa",
+      "name_ko": "소프트웨어 QA·엣지 케이스",
+      "name_en": "Software QA",
+      "status": "Prompt Pack",
+      "inputs": ["system", "state_model", "role_matrix", "api_schema", "environment"],
+      "outputs": ["test_cases", "expected_results", "recovery_checks", "coverage_map"],
+      "human_review": ["reproducibility", "production safety", "expected outcome correctness"]
+    }
+  ]
+}
