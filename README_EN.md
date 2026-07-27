@@ -1,25 +1,27 @@
-# Idea Diversity Engine — English
+# Diversity Generation Engine
 
-Idea Diversity Engine is an open application toolkit for turning Verbalized Sampling into repeatable workflows for content, product innovation, business design, research, IP, safety, games, software QA, and synthetic data.
+[한국어](README.md) · [Catalog](CATALOG.md)
 
-The project adds four production layers around distribution-level prompting:
+**Diversity Generation Engine (DGE)** is an open, provider-neutral framework for generating a portfolio of meaningfully different LLM candidates instead of one conventional answer or a list of superficial rewrites.
 
-1. solution-space stratification,
-2. semantic memory across batches,
-3. constraint and quality gates,
-4. vertical export documents.
+```text
+brief → baseline map → solution-space strata → verbalized sampling
+      → constraints → semantic deduplication → quality/risk gate
+      → portfolio selection → domain handoff document
+```
 
-The repository includes reusable skill files, provider-neutral prompts, JSON Schemas, examples, a minimal Python CLI, and a detailed Korean application/business report.
+## Repository layers
 
-See the main [README](README.md) for setup and the [Korean README](README_KR.md) for the full strategy.
+- `core/`: reusable generation and validation rules
+- `verticals/`: domain-specific inputs, prompts, rubrics, and outputs
+- `apps/`: user-facing prototypes and workbench specifications
+- `integrations/`: provider, MCP, REST, and workflow adapters
+- `benchmarks/`: Direct/List/VS evaluation plans
 
-## v0.1 implementation scope
+The v0.2 repository defines ten vertical packs: creative writing, game design, IP invention, safety training, business strategy, marketing content, visual/3D design, AI character behavior, research/synthetic data, and software QA.
 
-The reference package currently implements a provider-neutral prompt builder and structural portfolio validator. Embedding-based semantic memory, automated diversity evaluation, provider adapters, and the web interface are documented roadmap items rather than completed reference-code features.
+It also includes provider-neutral prototypes for Novel Idea Studio, Narrative Lens Panel, and Character Starter. Existing v0.1 prompts, schemas, skills, examples, Python CLI, and tests remain in their original paths for compatibility.
 
-## Key documents
+`typicality_estimate` is a model-estimated signal of how common a candidate may be in the full plausible response space. It is not quality, truth, success, market, patentability, or population probability, and returned values are not required to sum to one.
 
-- [Application landscape](docs/03_APPLICATION_LANDSCAPE_KR.md)
-- [Platform distribution strategy](docs/04_PLATFORM_DISTRIBUTION_MATRIX_KR.md)
-- [Business model portfolio](docs/05_BUSINESS_MODEL_PORTFOLIO_KR.md)
-- [Executive report](docs/14_EXECUTIVE_REPORT_KR.md)
+This is an independent application project inspired by *Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity*. It is not affiliated with the paper authors or CHATS-lab. Licensed under Apache-2.0.
